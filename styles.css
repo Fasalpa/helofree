@@ -1,0 +1,26 @@
+
+/*
+Display
+model box (margin padding, etc.)
+fonts
+others
+*/
+
+:root {
+  --serif-font: "Parisienne", cursive;
+  --san-serif-font: "Prompt", sans-serif;
+  --main-color: #f7f6f2;
+  --secondary-color: #52694e;
+  --third-color: #ded4c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
