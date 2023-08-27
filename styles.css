@@ -1,4 +1,3 @@
-
 /*
 Display
 model box (margin padding, etc.)
@@ -23,4 +22,18 @@ others
 body {
   width: 100%;
   height: 100vh;
+}
+.first-page {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--main-color);
+}
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  width: 300px;
+  height: 100vh;
+  text-align: left;
 }
