@@ -1,4 +1,4 @@
-/*
+        /*
 Display
 model box (margin padding, etc.)
 fonts
@@ -8,9 +8,12 @@ others
 :root {
   --serif-font: "Parisienne", cursive;
   --san-serif-font: "Prompt", sans-serif;
-  --main-color: #f7f6f2;
-  --secondary-color: #52694e;
-  --third-color: #ded4c8;
+  --bck-color1: #52694e;
+  --bck-color2: #f3f0e7;
+  --button-color: #ded4c8;
+  --sm: 14px;
+  --md: 18px;
+  --lg: 20px;
 }
 
 * {
@@ -20,6 +23,7 @@ others
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100vh;
 }
@@ -29,33 +33,114 @@ body {
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: var(--main-color);
+  background-color: var(--bck-color1);
 }
 
 .content {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   width: 300px;
   height: 100vh;
+  margin: 36px 36px 0;
   text-align: left;
 }
 
-h1{
-  text-align: left;
+h1 {
+  font-family: var(--san-serif-font);
+  font-size: var(--lg);
+  font-weight: 400;
+  color: white;
 }
 
-p{
-
+p {
+  font-family: var(--san-serif-font);
+  font-size: var(--sm);
+  font-weight: 100;
+  line-height: 25px;
+  text-align: start;
+  margin: 16px 0;
+  color: white;
 }
 
-.button-view{
-
+.button-view {
+  border: none;
+  border-radius: 20px 4px;
+  height: 50px;
+  width: 50%;
+  background-color: var(--button-color);
 }
 
-.secod-page{
-
+.contenedor {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
 }
 
-.icons{
+.freyja {
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 125%;
+  height: 125%;
+}
 
+.second-page {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bck-color2);
+}
+
+.caja-ruleta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 50%;
+  height: 100vh;
+  width: 300px;
+}
+
+.button-left {
+  margin: 250px 0 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(74, 79, 79);
+  opacity: 30%;
+}
+
+.ruleta {
+  display: flex;
+  place-items: center;
+  height: 250px;
+  width: 200px;
+  margin: 250px 0 0;
+  background-color: #DCD2C6;
+}
+
+.button-rigth {
+  margin: 250px 0 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(96, 119, 119);
+  opacity: 30%;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background-color: var(--bck-color2);
+}
+
+.background-icons {
+  background-color: var(--bck-color1);
+  border-radius: 50%;
+}
+
+.redes {
+  display: grid;
+  align-items: center;
+  width: 10vw;
+  height: 4vh;
+  margin: 8px 2px;
 }
