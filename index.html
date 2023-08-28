@@ -8,37 +8,198 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Prompt:wght@300;500;600;700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" src="/styles.css">
+    <link rel="stylesheet" src="/styles.css">
 
     <title>Helofree</title>
 
+    <style>
+        /*
+Display
+model box (margin padding, etc.)
+fonts
+others
+*/
+
+        :root {
+            --serif-font: "Parisienne", cursive;
+            --san-serif-font: "Prompt", sans-serif;
+            --bck-color1: #52694e;
+            --bck-color2: #f3f0e7;
+            --button-color: #ded4c8;
+            --sm: 14px;
+            --md: 18px;
+            --lg: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .first-page {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bck-color1);
+        }
+
+        .content {
+            width: 300px;
+            height: 100vh;
+            margin: 36px 36px 0;
+            text-align: left;
+        }
+
+        h1 {
+            font-family: var(--san-serif-font);
+            font-size: var(--lg);
+            font-weight: 400;
+            color: white;
+        }
+
+        p {
+            font-family: var(--san-serif-font);
+            font-size: var(--sm);
+            font-weight: 100;
+            line-height: 25px;
+            text-align: start;
+            margin: 16px 0;
+            color: white;
+        }
+
+        .button-view {
+            border: none;
+            border-radius: 20px 4px;
+            height: 50px;
+            width: 50%;
+            background-color: var(--button-color);
+        }
+
+        .contenedor {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .freyja {
+            position: absolute;
+            top: -15%;
+            left: -15%;
+            width: 125%;
+            height: 125%;
+        }
+
+        .second-page {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: var(--bck-color2);
+        }
+
+        .caja-ruleta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 50%;
+            height: 100vh;
+            width: 300px;
+        }
+
+        .button-left {
+            margin: 250px 0 0;
+            height: 25px;
+            width: 25px;
+            background-color: rgb(74, 79, 79);
+            opacity: 30%;
+        }
+
+        .ruleta {
+            display: flex;
+            place-items: center;
+            height: 250px;
+            width: 200px;
+            margin: 250px 0 0;
+            background-color: #DCD2C6;
+        }
+
+        .button-rigth {
+            margin: 250px 0 0;
+            height: 25px;
+            width: 25px;
+            background-color: rgb(96, 119, 119);
+            opacity: 30%;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            background-color: var(--bck-color2);
+        }
+
+        .background-icons {
+            background-color: var(--bck-color1);
+            border-radius: 50%;
+        }
+
+        .redes {
+            display: grid;
+            align-items: center;
+            width: 10vw;
+            height: 4vh;
+            margin: 8px 2px;
+        }
+    </style>
 </head>
 
 <body>
-    <section class="first-page">
-        <form class="content">
-            <h1>¡Únete a la familia de travesuras con <br> 
-                Loki, Freyja y Hela: Nuestros encantadores peluditos te esperan!
-            </h1>
-            <p>¡Acompáñanos en una aventura peluda! Estos tres traviesos integrantes de nuestra familia canina te harán
-                sonreír mientras descubres qué los hace tan especiales.</p>
-            <p>Prepárate para un derroche de ternura y diversión a cuatro patas</p>
-            <input type="submit" value="View more">
-        </form>
-    </section>
+    <main>
+        <section class="first-page">
+            <div class="content">
+                <h1>¡Una familia de travesuras: <br>
+                    Loki, Freyja y Hela. Estos encantadores peluditos te esperan!
+                </h1>
+                <p>¡Acompáñanos en una aventura peluda! Estos tres traviesos integrantes de nuestra familia canina te
+                    harán sonreír mientras descubres qué los hace tan especiales. <br>
+                    Prepárate para un derroche de ternura y diversión a cuatro patas
+                </p>
+                <button class="button-view">View more</button>
+                <div class="contenedor">
+                    <img src="/assets/freyja-blanco&negro.png" alt="foto" class="freyja">
+                </div>
+            </div>
+        </section>
 
-    <section class="secod-page">
-        <div></div>
-    </section>
-    
-    <footer>
-        <div> <a href=""><img src="/assets/icons8-instagram-100.svg" alt="Instagram"></a>
-        </div>
-        <div> <a href=""><img src="/assets/icons8-pinterest-100.svg" alt="Pinterest"></a>
-        </div>
-        <div> <a href=""><img src="/assets/icons8-logo-de-google-128.svg" alt="Google"></a>
-        </div>
-    </footer>
+
+        <section class="second-page">
+            <div class="caja-ruleta">
+                <div class="button-left"></div>
+                <div class="ruleta">
+                </div>
+                <div class="button-rigth"></div>
+            </div>
+            <footer>
+                <a href="" class="background-icons"><img src="/assets/icons8-instagram-100.svg" alt="Instagram"
+                        class="redes"></a>
+                <a href="" class="background-icons"><img src="/assets/icons8-pinterest-100.svg" alt="Pinterest"
+                        class="redes"></a>
+                <a href="" class="background-icons"><img src="/assets/icons8-logo-de-google-128.svg" alt="Google"
+                        class="redes"></a>
+            </footer>
+        </section>
+
+    </main>
+
 </body>
 
 </html>
