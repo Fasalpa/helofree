@@ -1,0 +1,61 @@
+/*
+Display
+model box (margin padding, etc.)
+fonts
+others
+*/
+
+:root {
+  --serif-font: "Parisienne", cursive;
+  --san-serif-font: "Prompt", sans-serif;
+  --main-color: #f7f6f2;
+  --secondary-color: #52694e;
+  --third-color: #ded4c8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: var(--san-serif-font);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+.serif {
+  font-family: var(--serif-font);
+  font-size: 2.4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.burger-menu {
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+}
+
+nav {
+  display: none;
+}
