@@ -1,4 +1,4 @@
-        /*
+/*
 Display
 model box (margin padding, etc.)
 fonts
@@ -22,10 +22,19 @@ others
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   position: relative;
   width: 100%;
   height: 100vh;
+}
+
+main {
+  position: relative;
+  overflow: hidden;
 }
 
 .first-page {
@@ -39,7 +48,7 @@ body {
 .content {
   width: 300px;
   height: 100vh;
-  margin: 36px 36px 0;
+  padding: 36px 0 0 0;
   text-align: left;
 }
 
@@ -68,24 +77,21 @@ p {
   background-color: var(--button-color);
 }
 
-.contenedor {
-  position: relative;
-  width: 300px;
-  height: 500px;
-  overflow: hidden;
-}
-
 .freyja {
   position: absolute;
-  top: -15%;
-  left: -15%;
-  width: 125%;
-  height: 125%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 420px;
 }
 
 .second-page {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 13%;
   width: 100%;
   height: 100vh;
   background-color: var(--bck-color2);
@@ -93,19 +99,39 @@ p {
 
 .caja-ruleta {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  opacity: 50%;
-  height: 100vh;
-  width: 300px;
+  align-items: start;
+  gap: 2rem;
 }
 
-.button-left {
-  margin: 250px 0 0;
+.button-left,
+.button-rigth {
+  border-style: none;
+  border-radius: 5rem;
   height: 25px;
   width: 25px;
-  background-color: rgb(74, 79, 79);
-  opacity: 30%;
+  background-color: var(--button-color);
+  cursor: pointer;
+}
+.button-left:hover,
+.button-rigth:hover, svg:hover {
+  width: 25.8px;
+  transition: all ease-in 0.1s;
+  background-color: var(--bck-color1);
+  stroke: var(--bck-color2);
+}
+
+svg {
+  padding-right: 0.2rem;
+  stroke: blue;
+  stroke-width: 0.3rem;
+  border-radius: 5rem;
+}
+
+.caja-ruleta :nth-child(1) {
+  display: flex;
+  gap: 2rem;
 }
 
 .ruleta {
@@ -113,34 +139,60 @@ p {
   place-items: center;
   height: 250px;
   width: 200px;
-  margin: 250px 0 0;
-  background-color: #DCD2C6;
-}
-
-.button-rigth {
-  margin: 250px 0 0;
-  height: 25px;
-  width: 25px;
-  background-color: rgb(96, 119, 119);
-  opacity: 30%;
+  background-color: #dcd2c6;
 }
 
 footer {
   display: flex;
   justify-content: space-around;
+  margin-bottom: 2rem;
   width: 100%;
   background-color: var(--bck-color2);
 }
 
 .background-icons {
   background-color: var(--bck-color1);
-  border-radius: 50%;
+  border-radius: 5rem;
 }
 
 .redes {
   display: grid;
   align-items: center;
-  width: 10vw;
-  height: 4vh;
-  margin: 8px 2px;
+  width: 5rem;
+  height: 4rem;
+  margin: 0.8rem 0.2rem;
+}
+
+@media (min-width: 430px) {
+}
+@media (min-width: 1114px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .freyja {
+    top: 65%;
+  }
+
+  .second-page {
+    justify-content: center;
+    align-items: end;
+  }
+
+  .caja-ruleta {
+    margin-right: 8rem;
+  }
+
+  footer {
+    gap: 2rem;
+    justify-content: flex-end;
+    padding-right: 7rem;
+  }
+
+  .redes {
+    width: 2rem;
+    height: 2rem;
+    margin: 0.6rem;
+  }
 }
